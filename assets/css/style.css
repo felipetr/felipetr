@@ -14,14 +14,6 @@
                  position: relative !important;
              }
              
-             #contentapp #appchild {
-                 display: none;
-             }
-             
-             #contentapp .loadedappchild {
-                 display: block;
-             }
-             
              #loader {
                  position: fixed;
                  top: 0;
