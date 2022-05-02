@@ -27,6 +27,7 @@ fetch("assets/js/languages.json").then(response => {
         mounted() {
             setTimeout(() => {
                 document.getElementById("contentapp").classList.toggle('loading');
+                document.getElementById("appchild").classList.toggle('loadedappchild');
             }, "1000")
         },
         el: '#app',

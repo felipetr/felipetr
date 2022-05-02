@@ -18,7 +18,7 @@
                  display: none;
              }
              
-             #contentapp .loading #appchild {
+             #contentapp .loadedappchild {
                  display: block;
              }
              
