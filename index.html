@@ -13,7 +13,7 @@
 
 
     <link rel="stylesheet" href="assets/css/felipetravassos.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=2134">
+    <link rel="stylesheet" href="assets/css/style.css?v=e">
     <link rel="stylesheet" href="assets/css/darkmode.css">
 
 
@@ -21,523 +21,530 @@
 
 <body>
     <div id="app">
-        <div id="appchild" class="darkmode">
-            <span v-bind:title="translate('darkmode')" v-on:click="darkmode()" class="darkmodetrail on">
+        <div id="contentapp">
+            <div id="loader">
+
+                <img v-on:click="closeloader()" src="assets/images/iconw.svg">
+
+            </div>
+            <div id="appchild" class="darkmode">
+                <span v-bind:title="translate('darkmode')" v-on:click="darkmode()" class="darkmodetrail on">
             <button  class="darkmodebutton"><i class="fas fa-moon"></i></button>
         </span>
-            <button class="languagebutton" v-on:click="languagemenu('open')" v-bind:title="translate('language')">
+                <button class="languagebutton" v-on:click="languagemenu('open')" v-bind:title="translate('language')">
         <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 64 64"x="0px"y="0px"><g><path d="M31.33,23.48a7.06,7.06,0,0,0-4.79,1.87A1.48,1.48,0,0,0,25.6,25s0,0,0,0a8.13,8.13,0,0,1-3.11-.59,12.28,12.28,0,0,0,2.48-6.3h.66a1.5,1.5,0,0,0,0-3H21.34V12.78a1.5,1.5,0,1,0-3,0v2.34H14.08a1.5,1.5,0,0,0,0,3h7.84A9,9,0,0,1,20,22.67a9.32,9.32,0,0,1-1.76-2.93,1.5,1.5,0,1,0-2.82,1,12.38,12.38,0,0,0,2.11,3.63,9.28,9.28,0,0,1-3.42.6h0a1.5,1.5,0,1,0,0,3h0A11.3,11.3,0,0,0,20,26.54,10.42,10.42,0,0,0,24.71,28a7,7,0,0,0-.51,2.63v1.12H13.77a1.5,1.5,0,0,0-1.14.52,1.47,1.47,0,0,0-.34,1.21c0,.1.19,1.23.53,2.82a1,1,0,0,1-1.57,1C8.1,35,4.74,32.2,3.69,30.23A1.82,1.82,0,0,0,3.54,30a4.07,4.07,0,0,1-.74-2.35V11.52A4.13,4.13,0,0,1,6.93,7.39H32.67a4.13,4.13,0,0,1,4.13,4.13v12ZM61.2,30.61V46.7a4,4,0,0,1-.74,2.35,1.17,1.17,0,0,0-.15.27c-1,2-4.41,4.77-7.56,7.09a1,1,0,0,1-1.57-1c.34-1.6.52-2.73.53-2.83a1.49,1.49,0,0,0-1.48-1.73H31.33A4.13,4.13,0,0,1,27.2,46.7V30.61a4.13,4.13,0,0,1,4.13-4.13H57.07A4.13,4.13,0,0,1,61.2,30.61Zm-10.42,14L49.05,40.3l-3.42-8.56h0a1.3,1.3,0,0,0-.08-.17l-.06-.1-.09-.12-.09-.1-.1-.09-.13-.1L45,31l-.16-.09h0a.38.38,0,0,0-.1,0l-.16-.05-.15,0h-.3l-.13,0-.17.05a.38.38,0,0,0-.1,0h0l-.15.09-.11.05-.12.1-.1.09-.09.1-.1.12s0,.07-.05.1l-.09.17h0L39.42,40.3l-1.73,4.32a1.51,1.51,0,0,0,.84,2,1.55,1.55,0,0,0,.56.11,1.51,1.51,0,0,0,1.39-1l1.34-3.35h4.84L48,45.73a1.49,1.49,0,0,0,1.39,1,1.54,1.54,0,0,0,.55-.11A1.5,1.5,0,0,0,50.78,44.62ZM43,39.38h2.44l-1.22-3Z"/></g></svg>
         </button>
-            <header class="" id="header">
-                <div class="container text-center">
-                    <nav class="p-3 position-relative">
+                <header class="" id="header">
+                    <div class="container text-center">
+                        <nav class="p-3 position-relative">
 
-                        <a href="#home" class="logoa"><img src="assets/images/logoc.svg" class="logoheader" alt=""></a>
+                            <a href="#home" class="logoa"><img src="assets/images/logoc.svg" class="logoheader" alt=""></a>
 
-                        <button id="respbtn" v-on:click="fullscreenmenu('open')" class="respbtn" data-title="Info Alert w/ Danger Button" data-text="This is a info alert" data-type="info" data-btntype="danger"><i class="fas fa-bars"></i></button>
+                            <button id="respbtn" v-on:click="fullscreenmenu('open')" class="respbtn" data-title="Info Alert w/ Danger Button" data-text="This is a info alert" data-type="info" data-btntype="danger"><i class="fas fa-bars"></i></button>
 
-                        <ul class="menu">
+                            <ul class="menu">
 
-                            <li><a v-bind:title="translate('aboutme_title')" href="#aboutme">{{translate('aboutme_title')}}</a></li>
-                            <li><a v-bind:title="translate('portfolio_title')" href="#portfolio">{{translate('portfolio_title')}}</a></li>
-                            <li><a v-bind:title="translate('skills_title')" href="#skills">{{translate('skills_title')}}</a></li>
-                            <li><a v-bind:title="translate('certifications_title')" href="#certifications">{{translate('certifications_title')}}</a></li>
-                            <li><a v-bind:title="translate('contactme_title')" href="#contactme">{{translate('contactme_title')}}</a></li>
+                                <li><a v-bind:title="translate('aboutme_title')" href="#aboutme">{{translate('aboutme_title')}}</a></li>
+                                <li><a v-bind:title="translate('portfolio_title')" href="#portfolio">{{translate('portfolio_title')}}</a></li>
+                                <li><a v-bind:title="translate('skills_title')" href="#skills">{{translate('skills_title')}}</a></li>
+                                <li><a v-bind:title="translate('certifications_title')" href="#certifications">{{translate('certifications_title')}}</a></li>
+                                <li><a v-bind:title="translate('contactme_title')" href="#contactme">{{translate('contactme_title')}}</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+
+                <div class="fullscreenmenu" id="fullscreenmenu">
+                    <button id="closebtn" v-on:click="fullscreenmenu('close')"><i class="fas fa-times"></i></button>
+                    <div class="novomenu">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('c')" href="#aboutme">{{translate('aboutme_title')}}</a></li>
+                            <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('portfolio_title')" href="#portfolio">{{translate('portfolio_title')}}</a></li>
+                            <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('skills_title')" href="#skills">{{translate('skills_title')}}</a></li>
+                            <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('certifications_title')" href="#certifications">{{translate('certifications_title')}}</a></li>
+                            <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('contactme_title')" href="#contactme">{{translate('contactme_title')}}</a></li>
 
                         </ul>
-                    </nav>
+                    </div>
                 </div>
-            </header>
 
-            <div class="fullscreenmenu" id="fullscreenmenu">
-                <button id="closebtn" v-on:click="fullscreenmenu('close')"><i class="fas fa-times"></i></button>
-                <div class="novomenu">
-                    <ul class="list-group">
-                        <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('c')" href="#aboutme">{{translate('aboutme_title')}}</a></li>
-                        <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('portfolio_title')" href="#portfolio">{{translate('portfolio_title')}}</a></li>
-                        <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('skills_title')" href="#skills">{{translate('skills_title')}}</a></li>
-                        <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('certifications_title')" href="#certifications">{{translate('certifications_title')}}</a></li>
-                        <li class="list-group-item"><a v-on:click="fullscreenmenu('close')" v-bind:title="translate('contactme_title')" href="#contactme">{{translate('contactme_title')}}</a></li>
 
-                    </ul>
+                <div class="fullscreenmenu" id="languagemenu">
+                    <button id="closebtn" v-on:click="languagemenu('close')"><i class="fas fa-times"></i></button>
+                    <div class="novomenu">
+                        <h4 class="px-3">{{translate('language')}}</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a v-on:click="languagechange('en-US')" title="pt-BR">en-US</a></li>
+                            <li class="list-group-item"><a v-on:click="languagechange('es-ES')" title="es-ES">es-ES</a></li>
+                            <li class="list-group-item"><a v-on:click="languagechange('pt-BR')" title="pt-BR">pt-BR</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
+                <section id="home">
+                    <div class="homedark"></div>
+                    <img src="assets/images/logow.svg" id="logohome" alt="Felipe Travassos">
+                </section>
+                <section id="aboutme" class="pt-4">
+                    <div class="container py-4 text-center">
+                        <h3>{{translate('aboutme_title')}}</h3>
 
-            <div class="fullscreenmenu" id="languagemenu">
-                <button id="closebtn" v-on:click="languagemenu('close')"><i class="fas fa-times"></i></button>
-                <div class="novomenu">
-                    <h4 class="px-3">{{translate('language')}}</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a v-on:click="languagechange('en-US')" title="pt-BR">en-US</a></li>
-                        <li class="list-group-item"><a v-on:click="languagechange('es-ES')" title="es-ES">es-ES</a></li>
-                        <li class="list-group-item"><a v-on:click="languagechange('pt-BR')" title="pt-BR">pt-BR</a></li>
-                    </ul>
-                </div>
-            </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="text-start">
+                                    <p>{{translate('aboutme_content_p1')}}</p>
+                                    <p>{{translate('aboutme_content_p2')}}</p>
+                                    <p>{{translate('aboutme_content_p3')}}</p>
+                                    <p>{{translate('aboutme_content_p4')}}</p>
+                                    <p>{{translate('aboutme_content_p5')}}</p>
 
-            <section id="home">
-                <div class="homedark"></div>
-                <img src="assets/images/logow.svg" id="logohome" alt="Felipe Travassos">
-            </section>
-            <section id="aboutme" class="pt-4">
-                <div class="container py-4 text-center">
-                    <h3>{{translate('aboutme_title')}}</h3>
-
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="text-start">
-                                <p>{{translate('aboutme_content_p1')}}</p>
-                                <p>{{translate('aboutme_content_p2')}}</p>
-                                <p>{{translate('aboutme_content_p3')}}</p>
-                                <p>{{translate('aboutme_content_p4')}}</p>
-                                <p>{{translate('aboutme_content_p5')}}</p>
+                                </div>
 
                             </div>
-
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="px-0 px-4">
+                            <div class="col-12 col-md-6">
                                 <div class="px-0 px-4">
                                     <div class="px-0 px-4">
                                         <div class="px-0 px-4">
-                                            <figure class="mefigure">
-                                                <img src="assets/images/melight.png" class="mephoto melight" alt="Felipe Travassos">
-                                                <img src="assets/images/me.png" class="mephoto me" alt="Felipe Travassos">
-                                            </figure>
+                                            <div class="px-0 px-4">
+                                                <figure class="mefigure">
+                                                    <img src="assets/images/melight.png" class="mephoto melight" alt="Felipe Travassos">
+                                                    <img src="assets/images/me.png" class="mephoto me" alt="Felipe Travassos">
+                                                </figure>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
 
-
-                </div>
-
-                <svg class="bgsection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <svg class="bgsection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                         <path fill="#3a4c86"fill-opacity="1"d="M0,256L60,266.7C120,277,240,299,360,309.3C480,320,600,320,720,277.3C840,235,960,149,1080,122.7C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
                     </svg>
-            </section>
-            <section id="portfolio" class="pt-4">
-                <div class="container py-4 text-center">
-                    <h3>{{translate('portfolio_title')}}</h3>
+                </section>
+                <section id="portfolio" class="pt-4">
+                    <div class="container py-4 text-center">
+                        <h3>{{translate('portfolio_title')}}</h3>
 
 
-                    <div class="row">
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/am.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">AM Advocacia</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="https://amadvocacia.com/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                        <div class="row">
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/am.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">AM Advocacia</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="https://amadvocacia.com/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+
+
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/oab.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">OAB Subsecção Campina Grande</div>
+                                        <p class="card-text">
+                                            <small>{{translate('fullstack')}}</small>
+                                        </p>
+                                        <a href="https://oabcampinagrande.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+
+
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/acp.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">ACP - Associação Comercial de Pernambuco</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="https://acpe.org.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/gerens.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Gerens - Neuromkt e Publi</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="https://gerens.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/tudo.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Tudo Agência</div>
+                                        <p class="card-text">
+                                            <small>{{translate('fullstack')}}</small>
+                                        </p>
+                                        <a href="https://tudoagencia.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/gruposeg.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Grupo Seg</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="https://gruposeg.com/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
                                 </div>
                                 <hr>
                             </div>
-                        </div>
-
-
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/oab.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">OAB Subsecção Campina Grande</div>
-                                    <p class="card-text">
-                                        <small>{{translate('fullstack')}}</small>
-                                    </p>
-                                    <a href="https://oabcampinagrande.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/fink.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Fink & Castellar - Arquitetura e Consultoria</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="https://gruposeg.com/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
                                 </div>
                                 <hr>
                             </div>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/afrodite.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Afrodite Motel</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="http://afroditemotel.com" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/dudeli.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Dudeli</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="http://dudeli.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/alemdopao.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Além do Pão</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="http://alemdopao.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/formatt.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Formätt Planejados</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="https://formattplanejados.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="col-6 col-lg-4 col-md-3">
+                                <div class="card" style="width: 100%">
+                                    <img src="assets/images/folio/portomares.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="card-title">Pousada Portomares</div>
+                                        <p class="card-text">
+                                            <small>{{translate('allstack')}}</small>
+                                        </p>
+                                        <a href="https://portomares.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
                         </div>
 
 
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/acp.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">ACP - Associação Comercial de Pernambuco</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="https://acpe.org.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/gerens.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Gerens - Neuromkt e Publi</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="https://gerens.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/tudo.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Tudo Agência</div>
-                                    <p class="card-text">
-                                        <small>{{translate('fullstack')}}</small>
-                                    </p>
-                                    <a href="https://tudoagencia.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/gruposeg.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Grupo Seg</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="https://gruposeg.com/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/fink.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Fink & Castellar - Arquitetura e Consultoria</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="https://gruposeg.com/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/afrodite.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Afrodite Motel</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="http://afroditemotel.com" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/dudeli.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Dudeli</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="http://dudeli.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/alemdopao.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Além do Pão</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="http://alemdopao.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/formatt.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Formätt Planejados</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="https://formattplanejados.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="col-6 col-lg-4 col-md-3">
-                            <div class="card" style="width: 100%">
-                                <img src="assets/images/folio/portomares.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div class="card-title">Pousada Portomares</div>
-                                    <p class="card-text">
-                                        <small>{{translate('allstack')}}</small>
-                                    </p>
-                                    <a href="https://portomares.com.br/" target="_blank" class="btn d-block btn-primary">{{translate('see')}}</a>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
 
                     </div>
 
 
 
-                </div>
 
-
-
-
-                <svg class="bgsection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <svg class="bgsection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#3a4c86"fill-opacity="1"d="M0,288L60,266.7C120,245,240,203,360,208C480,213,600,267,720,293.3C840,320,960,320,1080,304C1200,288,1320,256,1380,240L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
                   </svg>
-            </section>
-            <section id="aboutme" class="pt-4">
-                <div class="container py-4 text-center">
-                    <h3>{{translate('skills_title')}}</h3>
+                </section>
+                <section id="aboutme" class="pt-4">
+                    <div class="container py-4 text-center">
+                        <h3>{{translate('skills_title')}}</h3>
 
 
-                    <div class="row  text-start">
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>HTML5<br>
+                        <div class="row  text-start">
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>HTML5<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 90%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 90%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>CSS3<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>CSS3<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 90%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 90%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>Javascript/JQuery<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>Javascript/JQuery<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 60%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 60%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>PHP<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>PHP<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 45%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 45%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>MySQL<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>MySQL<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 60%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 60%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>Adobe Photoshop<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>Adobe Photoshop<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 80%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 80%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>Cordova<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>Cordova<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 25%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 25%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>Twitter Bootstrap<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>Twitter Bootstrap<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 85%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 85%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>Codeigniter<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>Codeigniter<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 15%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 15%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>Vue.js<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>Vue.js<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 5%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 5%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>{{translate('english')}}<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>{{translate('english')}}<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 50%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 50%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>GIT<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>GIT<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 10%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 10%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>Adobe Premiere Pro / Adobe After Effects / Adobe Animate<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>Adobe Premiere Pro / Adobe After Effects / Adobe Animate<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 40%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 40%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-6 col-12" style="margin-top: 30px;">
-                            <div>APIs (REST & SOAP)<br>
+                            <div class="col-sm-6 col-12" style="margin-top: 30px;">
+                                <div>APIs (REST & SOAP)<br>
 
-                                <div class="habilidadepercent">
-                                    <div style="width: 40%">
+                                    <div class="habilidadepercent">
+                                        <div style="width: 40%">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
 
-                </div>
 
+                </section>
+                <section id="certifications" class="pt-4">
+                    <div class="container py-4 text-center">
+                        <div class="pb-5">
+                            <h3>{{translate('certifications_title')}}</h3>
+                            <hr>
+                            <h4>{{translate('college')}}</h4>
+                            {{translate('college_info')}}
+                            <hr>
+                            <h4>{{translate('certifications')}}</h4>
+                            Pega Systems 7.4 Certified System Archtect
 
-            </section>
-            <section id="certifications" class="pt-4">
-                <div class="container py-4 text-center">
-                    <div class="pb-5">
-                        <h3>{{translate('certifications_title')}}</h3>
-                        <hr>
-                        <h4>{{translate('college')}}</h4>
-                        {{translate('college_info')}}
-                        <hr>
-                        <h4>{{translate('certifications')}}</h4>
-                        Pega Systems 7.4 Certified System Archtect
-
+                        </div>
                     </div>
-                </div>
 
-                <svg class="bgsection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <svg class="bgsection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#3a4c86"fill-opacity="1"d="M0,256L60,266.7C120,277,240,299,360,309.3C480,320,600,320,720,277.3C840,235,960,149,1080,122.7C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
                 </svg>
-            </section>
-            <section id="contactme" class="pt-4">
-                <div class="container py-4 text-start">
-                    <h3 class="text-center">{{translate('contactme_title')}}</h3>
-                    <div class="row">
-                        <!-- Section Titile -->
+                </section>
+                <section id="contactme" class="pt-4">
+                    <div class="container py-4 text-start">
+                        <h3 class="text-center">{{translate('contactme_title')}}</h3>
+                        <div class="row">
+                            <!-- Section Titile -->
 
-                        <!-- contact form -->
-                        <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
-                            <form @submit="onSubmit">
-                                <!-- Name -->
-                                <div class="form-group label-floating pt-3">
-                                    <label class="control-label" for="name">{{translate('name')}}</label>
-                                    <input v-model="contact.name" class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                <!-- email -->
-                                <div class="form-group label-floating pt-3">
-                                    <label class="control-label" for="email">Email</label>
-                                    <input v-model="contact.email" class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
-                                    <div class="help-block with-errors"></div>
-                                </div>
+                            <!-- contact form -->
+                            <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                                <form @submit="onSubmit">
+                                    <!-- Name -->
+                                    <div class="form-group label-floating pt-3">
+                                        <label class="control-label" for="name">{{translate('name')}}</label>
+                                        <input v-model="contact.name" class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <!-- email -->
+                                    <div class="form-group label-floating pt-3">
+                                        <label class="control-label" for="email">Email</label>
+                                        <input v-model="contact.email" class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
 
 
-                                <!-- Message -->
-                                <div class="form-group label-floating pt-3">
-                                    <label for="message" class="control-label">{{translate('message')}}</label>
-                                    <textarea v-model="contact.message" class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
-                                    <div class="help-block with-errors"></div>
-                                    <div class="d-none"><input v-model="contact.chh" name="chh"></div>
-                                    <input name="chh2" v-model="contact.chh2" type="hidden">
-                                </div>
-                                <!-- Form Submit -->
-                                <div class="mt-3">
-                                    <button class="btn btn-primary btn-block w-100 truebtn" type="submit" id="form-submit">{{translate('send')}}</button>
-                                    <button class="btn btn-secondary btn-block w-100 falsebtn" style="display: none;" id="form-submit-false" type="button">{{translate('sending')}}</button>
+                                    <!-- Message -->
+                                    <div class="form-group label-floating pt-3">
+                                        <label for="message" class="control-label">{{translate('message')}}</label>
+                                        <textarea v-model="contact.message" class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                        <div class="d-none"><input v-model="contact.chh" name="chh"></div>
+                                        <input name="chh2" v-model="contact.chh2" type="hidden">
+                                    </div>
+                                    <!-- Form Submit -->
+                                    <div class="mt-3">
+                                        <button class="btn btn-primary btn-block w-100 truebtn" type="submit" id="form-submit">{{translate('send')}}</button>
+                                        <button class="btn btn-secondary btn-block w-100 falsebtn" style="display: none;" id="form-submit-false" type="button">{{translate('sending')}}</button>
 
-                                </div>
+                                    </div>
 
-                            </form>
+                                </form>
+                            </div>
+                            <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+
+                                <p>contato@felipetravassos.com</p>
+                                <p>+55 (81) 9 9827.7376</p>
+                                <p>
+                                    <a title="Github" href="https://github.com/felipetr" class="contacturl"><i class="fab fa-github"></i></a>
+                                    <a title="Bitbucket" href="https://bitbucket.com/felipetravassos" class="contacturl"><i class="fab fa-bitbucket"></i></a>
+                                    <a title="Linkedin" href="https://www.linkedin.com/in/felipe-travassos-b5322934/" class="contacturl"><i class="fab fa-linkedin"></i></a>
+                                </p>
+                            </div>
                         </div>
-                        <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
 
-                            <p>contato@felipetravassos.com</p>
-                            <p>+55 (81) 9 9827.7376</p>
-                            <p>
-                                <a title="Github" href="https://github.com/felipetr" class="contacturl"><i class="fab fa-github"></i></a>
-                                <a title="Bitbucket" href="https://bitbucket.com/felipetravassos" class="contacturl"><i class="fab fa-bitbucket"></i></a>
-                                <a title="Linkedin" href="https://www.linkedin.com/in/felipe-travassos-b5322934/" class="contacturl"><i class="fab fa-linkedin"></i></a>
-                            </p>
-                        </div>
+
+
                     </div>
 
-
-
-                </div>
-
-                <svg class="bgsection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <svg class="bgsection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#3a4c86"fill-opacity="1"d="M0,288L60,266.7C120,245,240,203,360,208C480,213,600,267,720,293.3C840,320,960,320,1080,304C1200,288,1320,256,1380,240L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
                   </svg>
-            </section>
-            <footer class="p-3 text-center">
-                © 2021
-            </footer>
+                </section>
+                <footer class="p-3 text-center">
+                    © 2021
+                </footer>
 
 
+            </div>
         </div>
 
     </div>
@@ -551,5 +558,7 @@
     <script src="assets/js/app.js"></script>
 
 </body>
+
+</html>
 
 </html>

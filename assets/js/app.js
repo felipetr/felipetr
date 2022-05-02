@@ -24,6 +24,11 @@ fetch("assets/js/languages.json").then(response => {
 
 
     new Vue({
+        mounted() {
+            setTimeout(() => {
+                document.getElementById("contentapp").classList.toggle('loading');
+            }, "1000")
+        },
         el: '#app',
 
         data: {
@@ -110,6 +115,18 @@ fetch("assets/js/languages.json").then(response => {
 
 
             },
+
+            closeloader() {
+
+
+
+
+
+
+
+            },
+
+
             fullscreenmenu(value) {
 
 
@@ -154,6 +171,7 @@ fetch("assets/js/languages.json").then(response => {
                 document.getElementById("languagemenu").classList.remove('opened');
             }
         }
+
     });
 
 

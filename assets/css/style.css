@@ -1,349 +1,437 @@
-     body,
-     html {
-         font-family: 'FelipeTravassos', sans-serif;
-         height: 100%;
-         color: #3a81b3;
-     }
-     
-     header {
-         position: fixed;
-         left: 0;
-         right: 0;
-         top: 0;
-         transition: all 500ms ease-in-out;
-         z-index: 500;
-     }
-     
-     header nav {
-         position: relative;
-         text-align: left;
-     }
-     
-     section {
-         background: linear-gradient(0deg, #abc9dd 0%, #fff 100%);
-         position: relative;
-     }
-     
-     section .container {
-         position: relative;
-         z-index: 30;
-     }
-     
-     section .bgsection {
-         width: 100%;
-         position: absolute;
-         bottom: 0;
-         left: 0;
-     }
-     
-     section p,
-     .na-text {
-         color: #383838;
-     }
-     
-     .logoa {
-         position: absolute;
-         display: inline-block;
-         right: 14px;
-         top: -57px;
-         background: url("../images/logow.svg") center center no-repeat;
-         background-size: contain;
-         width: 147px;
-         transition: all 500ms ease-in-out;
-         height: 56.5167px;
-     }
-     
-     .logoheader {
-         width: 147px;
-         height: 56.5167px;
-         transition: all 500ms ease-in-out;
-     }
-     
-     #respbtn,
-     #closebtn {
-         display: inline-block;
-         padding: 12px;
-         color: inherit;
-         text-decoration: none !important;
-         border: 1px solid transparent;
-         border-radius: 3px;
-         transition: all 500ms ease-in-out;
-         color: #fff !important;
-         background: transparent !important;
-         border: none !important;
-     }
-     
-     #closebtn {
-         position: absolute;
-         color: #316d97 !important;
-         right: 5px;
-         font-size: 18px;
-         top: 15px;
-     }
-     
-     header nav .menu {
-         display: none;
-     }
-     
-     .topheader {
-         border-bottom: 1px solid #ccc;
-         background: #fff;
-     }
-     
-     .topheader #respbtn {
-         color: #316d97 !important;
-     }
-     
-     .topheader .logoa {
-         top: 14px;
-     }
-     
-     .fullscreenmenu {
-         transition: all 500ms ease-in-out;
-         position: fixed;
-         z-index: 1000;
-         padding-top: 80px;
-         top: 0;
-         right: calc(100% + 31px);
-         bottom: 0;
-         border-right: 1px solid #ccc;
-         left: -100%;
-         width: calc(100% - 30px);
-         background: #fff;
-     }
-     
-     .fullscreenmenu .novomenu {
-         overflow-y: auto;
-         position: absolute;
-         top: 80px;
-         left: 0;
-         right: 0;
-         bottom: 0;
-     }
-     
-     .fullscreenmenu li {
-         padding: 0 !important;
-         border: none !important;
-     }
-     
-     .fullscreenmenu a {
-         display: block;
-         padding: 15px;
-         color: #316d97 !important;
-         text-decoration: none;
-     }
-     
-     .fullscreenmenu.opened {
-         right: 30px;
-         left: 0;
-     }
-     
-     #home {
-         background: url("../images/pattern.jpg") top center repeat-x;
-         background-size: contain;
-         text-align: center;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         position: relative;
-     }
-     
-     #logohome {
-         width: 400px;
-         max-width: calc(100% - 200px);
-         position: relative;
-         z-index: 2;
-     }
-     
-     .homedark {
-         position: absolute;
-         left: 0;
-         right: 0;
-         bottom: 0px;
-         border-bottom: 1px solid #08020e;
-         top: 0;
-         background: url("../images/patterndark.jpg") top center repeat-x;
-         background-size: contain;
-         transition: all 500ms ease-in-out;
-         opacity: 0;
-     }
-     
-     .darkmodetrail {
-         position: fixed;
-         border-radius: 15px;
-         height: 30px;
-         z-index: 600;
-         transition: all 500ms ease-in-out;
-         width: 50px;
-         background: #ccdbdf;
-         cursor: pointer;
-         border: 1px solid #99a2a5;
-         bottom: 15px;
-         right: 15px;
-     }
-     
-     .darkmodetrail .darkmodebutton i {
-         border-radius: 10px;
-         background-color: #7d8283;
-         color: transparent;
-         transition: all 500ms ease-in-out;
-     }
-     
-     .darkmodetrail .darkmodebutton {
-         background: transparent;
-         width: 20px;
-         height: 20px;
-         font-size: 20px;
-         border: transparent;
-         position: absolute;
-         right: 28px;
-         top: -1.5px;
-         border-radius: 15px;
-         color: #fff;
-         transition: all 500ms ease-in-out;
-     }
-     
-     .languagebutton {
-         position: fixed;
-         z-index: 600;
-         top: 98px;
-         font-size: 30px;
-         left: 0;
-         border-radius: 0 20px 20px 0;
-         border: 1px solid #09868f;
-         background: #07a5b0;
-         line-height: 20px;
-         color: #fff;
-         padding: 0 10px;
-         transition: all 500ms ease-in-out;
-     }
-     
-     .languagebutton svg {
-         width: 30px;
-         fill: #fff;
-         transition: all 500ms ease-in-out;
-     }
-     
-     .languagebutton:hover {
-         padding-left: 15px;
-     }
-     
-     .mefigure {
-         position: relative;
-     }
-     
-     .mephoto {
-         width: 100%;
-         transition: all 500ms ease-in-out;
-     }
-     
-     .melight {
-         position: absolute;
-         left: 0;
-         right: 0;
-         opacity: 1;
-     }
-     
-     .me {
-         opacity: 0;
-     }
-     
-     .bgsection path {
-         transition: all 500ms ease-in-out;
-         fill: #fff;
-     }
-     
-     footer {
-         transition: all 500ms ease-in-out;
-         background: #fff;
-         color: #cccccc;
-     }
-     
-     .card {
-         background: transparent !important;
-         border: none !important;
-     }
-     
-     .contacturl {
-         color: #4293c0;
-         font-size: 25px;
-         transition: all 500ms ease-in-out;
-     }
-     
-     .habilidadepercent {
-         background: #fff;
-         width: 100%;
-         height: 5px;
-         border-radius: 10px;
-         overflow: hidden;
-         transition: all 500ms ease-in-out;
-         display: block;
-         margin: 6px 0;
-     }
-     
-     .habilidadepercent div {
-         height: 5px;
-         border-radius: 10px;
-         transition: all 500ms ease-in-out;
-         background: #4293c0;
-         filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00b7bf', endColorstr='#4293c0', GradientType=1);
-         display: block;
-     }
-     
-     @media (min-width: 576px) {}
-     
-     @media (min-width: 768px) {}
-     
-     @media (min-width: 992px) {
-         header nav .menu {
-             display: block;
-         }
-         header nav .menu {
-             list-style: none;
-             margin: 0;
-             padding: 0;
-             display: inline-block;
-             float: none;
-         }
-         header nav {
-             text-align: center;
-         }
-         .topheader nav {
-             text-align: left;
-         }
-         header nav .menu li {
-             display: inline-block;
-             margin: 0 6px;
-         }
-         header nav .menu a {
-             display: inline-block;
-             padding: 12px;
-             color: inherit;
-             text-decoration: none !important;
-             border: 1px solid transparent;
-             border-radius: 3px;
-             transition: all 500ms ease-in-out;
-             color: #fff !important;
-         }
-         .topheader nav .menu a {
-             color: #316d97 !important;
-         }
-         #respbtn {
-             display: none;
-         }
-         #fullscreenmenu,
-         #fullscreenmenu.opened {
-             display: none !important;
-         }
-         a {
-             cursor: pointer;
-         }
-         #languagemenu.opened {
-             right: auto !important;
-             width: 300px !important;
-         }
-     }
-     
-     @media (min-width: 1200px) {}
-     
-     @media (min-width: 1400px) {}
+             body,
+             html {
+                 font-family: 'FelipeTravassos', sans-serif;
+                 height: 100%;
+                 color: #3a81b3;
+             }
+             
+             #contentapp {
+                 width: 100%;
+                 position: fixed;
+             }
+             
+             .loading {
+                 position: relative !important;
+             }
+             
+             #loader {
+                 position: fixed;
+                 top: 0;
+                 right: 0;
+                 background: url("../images/patterndark.jpg") top center repeat-x;
+                 background-size: contain;
+                 bottom: 0;
+                 left: 0;
+                 transition: all 500ms ease-in-out;
+                 z-index: 99999;
+             }
+             
+             #loader img {
+                 position: absolute;
+                 width: 100px;
+                 transition: all 500ms ease-in-out;
+                 animation: loadinganim 2s ease 0s infinite normal forwards;
+                 top: calc(50% - 25px);
+                 left: calc(50% - 50px);
+             }
+             
+             .loading #loader img {
+                 animation: closeloadinganim 500ms ease 0s 1 normal forwards;
+             }
+             
+             .loading #loader {
+                 animation: closeloadinganimfull 500ms ease 0s 1 normal forwards;
+             }
+             
+             @keyframes loadinganim {
+                 0% {
+                     transform: scale3d(1, 1, 1);
+                 }
+                 30% {
+                     transform: scale3d(1.25, 0.75, 1);
+                 }
+                 40% {
+                     transform: scale3d(0.75, 1.25, 1);
+                 }
+                 50% {
+                     transform: scale3d(1.15, 0.85, 1);
+                 }
+                 65% {
+                     transform: scale3d(0.95, 1.05, 1);
+                 }
+                 75% {
+                     transform: scale3d(1.05, 0.95, 1);
+                 }
+                 100% {
+                     transform: scale3d(1, 1, 1);
+                 }
+             }
+             
+             @keyframes closeloadinganim {
+                 0% {
+                     transform: scale(1);
+                 }
+                 100% {
+                     transform: scale(0);
+                 }
+             }
+             
+             @keyframes closeloadinganimfull {
+                 0% {
+                     opacity: 1;
+                 }
+                 99% {
+                     opacity: 0;
+                     display: block;
+                     top: 0%;
+                 }
+                 100% {
+                     opacity: 0;
+                     top: 100%;
+                     display: none !important;
+                 }
+             }
+             
+             header {
+                 position: fixed;
+                 left: 0;
+                 right: 0;
+                 top: 0;
+                 transition: all 500ms ease-in-out;
+                 z-index: 500;
+             }
+             
+             header nav {
+                 position: relative;
+                 text-align: left;
+             }
+             
+             section {
+                 background: linear-gradient(0deg, #abc9dd 0%, #fff 100%);
+                 position: relative;
+             }
+             
+             section .container {
+                 position: relative;
+                 z-index: 30;
+             }
+             
+             section .bgsection {
+                 width: 100%;
+                 position: absolute;
+                 bottom: 0;
+                 left: 0;
+             }
+             
+             section p,
+             .na-text {
+                 color: #383838;
+             }
+             
+             .logoa {
+                 position: absolute;
+                 display: inline-block;
+                 right: 14px;
+                 top: -57px;
+                 background: url("../images/logow.svg") center center no-repeat;
+                 background-size: contain;
+                 width: 147px;
+                 transition: all 500ms ease-in-out;
+                 height: 56.5167px;
+             }
+             
+             .logoheader {
+                 width: 147px;
+                 height: 56.5167px;
+                 transition: all 500ms ease-in-out;
+             }
+             
+             #respbtn,
+             #closebtn {
+                 display: inline-block;
+                 padding: 12px;
+                 color: inherit;
+                 text-decoration: none !important;
+                 border: 1px solid transparent;
+                 border-radius: 3px;
+                 transition: all 500ms ease-in-out;
+                 color: #fff !important;
+                 background: transparent !important;
+                 border: none !important;
+             }
+             
+             #closebtn {
+                 position: absolute;
+                 color: #316d97 !important;
+                 right: 5px;
+                 font-size: 18px;
+                 top: 15px;
+             }
+             
+             header nav .menu {
+                 display: none;
+             }
+             
+             .topheader {
+                 border-bottom: 1px solid #ccc;
+                 background: #fff;
+             }
+             
+             .topheader #respbtn {
+                 color: #316d97 !important;
+             }
+             
+             .topheader .logoa {
+                 top: 14px;
+             }
+             
+             .fullscreenmenu {
+                 transition: all 500ms ease-in-out;
+                 position: fixed;
+                 z-index: 1000;
+                 padding-top: 80px;
+                 top: 0;
+                 right: calc(100% + 31px);
+                 bottom: 0;
+                 border-right: 1px solid #ccc;
+                 left: -100%;
+                 width: calc(100% - 30px);
+                 background: #fff;
+             }
+             
+             .fullscreenmenu .novomenu {
+                 overflow-y: auto;
+                 position: absolute;
+                 top: 80px;
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+             }
+             
+             .fullscreenmenu li {
+                 padding: 0 !important;
+                 border: none !important;
+             }
+             
+             .fullscreenmenu a {
+                 display: block;
+                 padding: 15px;
+                 color: #316d97 !important;
+                 text-decoration: none;
+             }
+             
+             .fullscreenmenu.opened {
+                 right: 30px;
+                 left: 0;
+             }
+             
+             #home {
+                 background: url("../images/pattern.jpg") top center repeat-x #169db1;
+                 background-size: contain;
+                 text-align: center;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 position: relative;
+             }
+             
+             #logohome {
+                 width: 400px;
+                 max-width: calc(100% - 200px);
+                 position: relative;
+                 z-index: 2;
+             }
+             
+             .homedark {
+                 position: absolute;
+                 left: 0;
+                 right: 0;
+                 bottom: 0px;
+                 border-bottom: 1px solid #08020e;
+                 top: 0;
+                 background: url("../images/patterndark.jpg") top center repeat-x #100528;
+                 ;
+                 background-size: contain;
+                 transition: all 500ms ease-in-out;
+                 opacity: 0;
+             }
+             
+             .darkmodetrail {
+                 position: fixed;
+                 border-radius: 15px;
+                 height: 30px;
+                 z-index: 600;
+                 transition: all 500ms ease-in-out;
+                 width: 50px;
+                 background: #ccdbdf;
+                 cursor: pointer;
+                 border: 1px solid #99a2a5;
+                 bottom: 15px;
+                 right: 15px;
+             }
+             
+             .darkmodetrail .darkmodebutton i {
+                 border-radius: 10px;
+                 background-color: #7d8283;
+                 color: transparent;
+                 transition: all 500ms ease-in-out;
+             }
+             
+             .darkmodetrail .darkmodebutton {
+                 background: transparent;
+                 width: 20px;
+                 height: 20px;
+                 font-size: 20px;
+                 border: transparent;
+                 position: absolute;
+                 right: 28px;
+                 top: -1.5px;
+                 border-radius: 15px;
+                 color: #fff;
+                 transition: all 500ms ease-in-out;
+             }
+             
+             .languagebutton {
+                 position: fixed;
+                 z-index: 600;
+                 top: 98px;
+                 font-size: 30px;
+                 left: 0;
+                 border-radius: 0 20px 20px 0;
+                 border: 1px solid #09868f;
+                 background: #07a5b0;
+                 line-height: 20px;
+                 color: #fff;
+                 padding: 0 10px;
+                 transition: all 500ms ease-in-out;
+             }
+             
+             .languagebutton svg {
+                 width: 30px;
+                 fill: #fff;
+                 transition: all 500ms ease-in-out;
+             }
+             
+             .languagebutton:hover {
+                 padding-left: 15px;
+             }
+             
+             .mefigure {
+                 position: relative;
+             }
+             
+             .mephoto {
+                 width: 100%;
+                 transition: all 500ms ease-in-out;
+             }
+             
+             .melight {
+                 position: absolute;
+                 left: 0;
+                 right: 0;
+                 opacity: 1;
+             }
+             
+             .me {
+                 opacity: 0;
+             }
+             
+             .bgsection path {
+                 transition: all 500ms ease-in-out;
+                 fill: #fff;
+             }
+             
+             footer {
+                 transition: all 500ms ease-in-out;
+                 background: #fff;
+                 color: #cccccc;
+             }
+             
+             .card {
+                 background: transparent !important;
+                 border: none !important;
+             }
+             
+             .contacturl {
+                 color: #4293c0;
+                 font-size: 25px;
+                 transition: all 500ms ease-in-out;
+             }
+             
+             .habilidadepercent {
+                 background: #fff;
+                 width: 100%;
+                 height: 5px;
+                 border-radius: 10px;
+                 overflow: hidden;
+                 transition: all 500ms ease-in-out;
+                 display: block;
+                 margin: 6px 0;
+             }
+             
+             .habilidadepercent div {
+                 height: 5px;
+                 border-radius: 10px;
+                 transition: all 500ms ease-in-out;
+                 background: #4293c0;
+                 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00b7bf', endColorstr='#4293c0', GradientType=1);
+                 display: block;
+             }
+             
+             @media (min-width: 576px) {}
+             
+             @media (min-width: 768px) {}
+             
+             @media (min-width: 992px) {
+                 header nav .menu {
+                     display: block;
+                 }
+                 header nav .menu {
+                     list-style: none;
+                     margin: 0;
+                     padding: 0;
+                     display: inline-block;
+                     float: none;
+                 }
+                 header nav {
+                     text-align: center;
+                 }
+                 .topheader nav {
+                     text-align: left;
+                 }
+                 header nav .menu li {
+                     display: inline-block;
+                     margin: 0 6px;
+                 }
+                 header nav .menu a {
+                     display: inline-block;
+                     padding: 12px;
+                     color: inherit;
+                     text-decoration: none !important;
+                     border: 1px solid transparent;
+                     border-radius: 3px;
+                     transition: all 500ms ease-in-out;
+                     color: #fff !important;
+                 }
+                 .topheader nav .menu a {
+                     color: #316d97 !important;
+                 }
+                 #respbtn {
+                     display: none;
+                 }
+                 #fullscreenmenu,
+                 #fullscreenmenu.opened {
+                     display: none !important;
+                 }
+                 a {
+                     cursor: pointer;
+                 }
+                 #languagemenu.opened {
+                     right: auto !important;
+                     width: 300px !important;
+                 }
+             }
+             
+             @media (min-width: 1200px) {}
+             
+             @media (min-width: 1400px) {}
