@@ -14,11 +14,19 @@
                  position: relative !important;
              }
              
+             #contentapp #appchild {
+                 display: none;
+             }
+             
+             #contentapp .loading #appchild {
+                 display: block;
+             }
+             
              #loader {
                  position: fixed;
                  top: 0;
                  right: 0;
-                 background: url("../images/patterndark.jpg") top center repeat-x;
+                 background: url("../images/patterndark.jpg") top center repeat-x #200747;
                  background-size: contain;
                  bottom: 0;
                  left: 0;
