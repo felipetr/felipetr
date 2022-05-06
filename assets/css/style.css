@@ -187,6 +187,7 @@ header nav .menu {
 {
     background: rgba(7, 18, 43, 0.9);
     border-radius: 15px;
+    max-width: calc(100% - 47px);
 }
 
 
@@ -471,3 +472,4 @@ z-index: 5;
     position: fixed;
     z-index: 1;
   }
+  
