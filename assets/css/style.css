@@ -18,13 +18,13 @@ html {
     position: fixed;
     top: 0;
     right: 0;
-    background: rgb(16, 5, 40, 1);
-    background: linear-gradient(331deg, rgba(170, 16, 170, 1) 0%, rgba(19, 45, 97, 1) 50%, rgba(16, 5, 40, 1) 100%);
-    background-size: contain;
-    bottom: 0;
+      bottom: 0;
     left: 0;
     transition: all 500ms ease-in-out;
     z-index: 99999;
+    background: rgb(16, 5, 40, 1);
+    background: linear-gradient(331deg, rgba(170, 16, 170, 1) 0%, rgba(19, 45, 97, 1) 50%, rgba(16, 5, 40, 1) 100%);
+ 
 }
 
 #loader img {
@@ -108,8 +108,8 @@ header nav {
 }
 
 section {
-    background: linear-gradient(0deg, #abc9dd 0%, #fff 100%);
     position: relative;
+    background:  transparent !important;
 }
 
 section .container {
@@ -173,10 +173,7 @@ header nav .menu {
     display: none;
 }
 
-.topheader {
-    border-bottom: 1px solid #ccc;
-    background: #fff;
-}
+
 
 .topheader #respbtn {
     color: #316d97 !important;
@@ -185,6 +182,13 @@ header nav .menu {
 .topheader .logoa {
     top: 14px;
 }
+
+.bgcontainer
+{
+    background: rgba(7, 18, 43, 0.9);
+    border-radius: 15px;
+}
+
 
 .fullscreenmenu {
     transition: all 500ms ease-in-out;
@@ -359,8 +363,9 @@ header nav .menu {
 
 footer {
     transition: all 500ms ease-in-out;
-    background: #fff;
-    color: #cccccc;
+    position: relative;
+    color: #fff !important;
+z-index: 5;
 }
 
 .card {
@@ -459,7 +464,10 @@ footer {
   }
   
   #particles-js {
-    position: absolute;
     width: 100%;
     height: 100%;
+    background: rgb(16, 5, 40, 1);
+    background: linear-gradient(331deg, rgba(170, 16, 170, 1) 0%, rgba(19, 45, 97, 1) 50%, rgba(16, 5, 40, 1) 100%);
+    position: fixed;
+    z-index: 1;
   }

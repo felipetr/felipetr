@@ -1,6 +1,7 @@
     .darkmode .topheader {
-        border-bottom: 1px solid #1b063b !important;
-        background: #200747 !important;
+     
+        background: rgba(15, 33, 74, .9);
+        border-bottom: rgb(15, 33, 74);
     }
     
     .darkmode .logoheader {
@@ -41,11 +42,7 @@
         border-color: rgb(35, 8, 82);
     }
     
-    .darkmode section {
-        background: rgba(49, 13, 111, 1);
-        background: linear-gradient(0deg, rgb(34, 8, 78) 0%, rgb(22, 5, 49) 100%);
-        border-color: rgb(35, 8, 82);
-    }
+ 
     
     .darkmode section p {
         color: #fff;
@@ -90,7 +87,7 @@
     }
     
     .darkmode .habilidadepercent {
-        background: #160531 !important;
+        background: #020a1e !important;
     }
     
     .darkmode .habilidadepercent div {
@@ -101,7 +98,4 @@
         color: #fff;
     }
     
-    .darkmode footer {
-        background: #160531 !important;
-        color: #fff !important;
-    }
+    
