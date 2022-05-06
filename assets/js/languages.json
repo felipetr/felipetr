@@ -1,8 +1,11 @@
 {
     "en-US": {
         "language": "Language",
+		"close": "Close",
+        "openmenu": "Open Menu",
         "see": "See",
         "english": "English",
+        "spanish": "Spanish",
         "name": "Name",
         "college": "College",
         "certifications": "Certifications",
@@ -31,8 +34,11 @@
     },
     "es-ES": {
         "language": "Idioma",
+		"close": "Cerrar",
+		"openmenu": "Abrir Menu",
         "name": "Nombre",
         "english": "Inglés",
+		 "spanish": "Español",
         "message": "Mensaje",
         "college": "Educación Superior",
         "college_info": "Faculdade Maurício de Nassau | Recife - PE - Brasil | Comunicación Social - Calificación en Cine (incompleto, 7 semestres, 87,5%)",
@@ -61,6 +67,8 @@
     },
     "pt-BR": {
         "language": "Idioma",
+        "close": "Fechar",
+		"openmenu": "Abrir Menu",
         "see": "Ver",
         "name": "Nome",
         "errormsg_title": "Não foi possível enviar mensagem!",
@@ -68,6 +76,7 @@
         "successmsg_title": "Mensagem enviada com sucesso!",
         "successmsg_subtitle": "Entrarei em contato em breve.",
         "english": "Inglês",
+		 "spanish": "Espanhol",
         "college": "Curso Superior",
         "college_info": "Faculdade Maurício de Nassau | Recife - PE - Brasil | Comunicação Social - Habilitação em Cinema Digital (incompleto, 7 semestres, 87,5%)",
         "message": "Mensagem",
